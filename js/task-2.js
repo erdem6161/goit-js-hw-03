@@ -1,13 +1,13 @@
+// Make Array Function
 function makeArray(firstArray, secondArray, maxLength) {
     const newArray = firstArray.concat(secondArray);
-        if (newArray.length > maxLength) {
-        return newArray.slice(0, maxLength);
-        }
-    return newArray;
+    return newArray.length > maxLength ? newArray.slice(0, maxLength) : newArray;
 }
-console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
-console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
-console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3)); // ["Mango", "Ajax", "Chelsea"]
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
-console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+
+function handleMakeArray() {
+    const array1 = document.getElementById('array1Input').value.split(',').map(item => item.trim());
+    const array2 = document.getElementById('array2Input').value.split(',').map(item => item.trim());
+    const maxLength = parseInt(document.getElementById('maxLengthInput').value, 10);
+    const combinedArray = makeArray(array1, array2, maxLength);
+    document.getElementById('makeArrayOutput').textContent = JSON.stringify(combinedArray);
+}

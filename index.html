@@ -7,8 +7,48 @@
     <script src="./js/task-1.js" defer></script>
     <script src="./js/task-2.js" defer></script>
     <script src="./js/task-3.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button, select {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>JavaScript Functions Example</h1>
+
+    <!-- Slugify Section -->
+    <h2>Slugify Function</h2>
+    <input type="text" id="slugifyInput" placeholder="Enter a title" size="50">
+    <button onclick="handleSlugify()">Generate Slug</button>
+    <div class="output" id="slugifyOutput">Slug will appear here...</div>
+
+    <!-- Make Array Section -->
+    <h2>Make Array Function</h2>
+    <input type="text" id="array1Input" placeholder="Enter first array (comma-separated)" size="50">
+    <input type="text" id="array2Input" placeholder="Enter second array (comma-separated)" size="50">
+    <input type="number" id="maxLengthInput" placeholder="Enter max length">
+    <button onclick="handleMakeArray()">Combine Arrays</button>
+    <div class="output" id="makeArrayOutput">Combined array will appear here...</div>
+
+    <!-- Filter Array Section -->
+    <h2>Filter Array Function</h2>
+    <input type="text" id="filterArrayInput" placeholder="Enter numbers (comma-separated)" size="50">
+    <input type="number" id="filterValueInput" placeholder="Enter value to filter">
+    <button onclick="handleFilterArray()">Filter Numbers</button>
+    <div class="output" id="filterArrayOutput">Filtered array will appear here...</div>
+
 </body>
 </html>
